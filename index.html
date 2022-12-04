@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TS</title>
+
+	<link href="dist/output.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather" rel="stylesheet">
+</head>
+
+<body>
+<div class="container mx-auto">
+	<div class="h-screen flex flex-col items-center gap-4 mb-20">
+		<div class="text-3xl mb-4 pt-20 font-black
+	  	md:mb-10"
+		>
+			Frontend articles
+		</div>
+		<div class="flex flex-col gap-2 items-center
+	  	md:flex-row"
+		>
+			<div class="text-lg font-black">
+				Sort by tags:
+			</div>
+			<div class="flex gap-2 flex-wrap">
+				<div class="py-0.5 px-2 text-sm rounded-lg border-2 border-blush hover:bg-blush cursor-pointer"> All</div>
+				<div class="py-0.5 px-2 text-sm rounded-lg border-2 border-blush hover:bg-blush cursor-pointer"> HTML</div>
+				<div class="py-0.5 px-2 text-sm rounded-lg border-2 border-blush hover:bg-blush cursor-pointer"> CSS</div>
+				<div class="py-0.5 px-2 text-sm rounded-lg border-2 border-blush hover:bg-blush cursor-pointer"> JavaScript
+				</div>
+				<div class="py-0.5 px-2 text-sm rounded-lg border-2 border-blush hover:bg-blush cursor-pointer"> Vue.js</div>
+				<div class="py-0.5 px-2 text-sm rounded-lg border-2 border-blush hover:bg-blush cursor-pointer"> Typescript
+				</div>
+			</div>
+		</div>
+		<div id="topics" class="grid grid-cols-1 gap-2 p-4 bg-white items-center
+	  	md:grid-cols-3"
+		>
+			<div
+				class="h-36 p-4 flex flex-col justify-between gap-4  shadow-base cursor-pointer hover:shadow-xl duration-300">
+				<div class="text-lg font-bold leading-5"> CSS Grid Layout</div>
+				<div class="flex justify-between items-center">
+					<div class="py-0.5 px-2 text-xs rounded-xl border-2 text-blue border-blue"> CSS</div>
+					<div class="flex gap-2 items-center">
+						<span class="text-xs opacity-70 font-black"> MDN </span>
+						<img src="src/img/arrow.svg" alt="read" class="w-5 h-5">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    body {
+        font-family: 'Merriweather', sans-serif;
+        background: linear-gradient(-45deg, #baf5e7, #b8c8f5, #ECEFF8, #f5eab3);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        @apply text-dark bg-main;
+    }
+
+    @keyframes gradient {
+        0% {
+            background-position: 0 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0 50%;
+        }
+    }
+}
