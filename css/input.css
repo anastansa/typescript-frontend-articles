@@ -24,3 +24,11 @@
         }
     }
 }
+
+.tag {
+    @apply py-0.5 px-2 text-sm rounded-lg border-2 border-blush hover:bg-blush cursor-pointer
+}
+
+.active {
+    @apply bg-blush
+}

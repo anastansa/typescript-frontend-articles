@@ -15,44 +15,26 @@
 <body>
 <div class="container mx-auto">
 	<div class="h-screen flex flex-col items-center gap-4 mb-20">
-		<div class="text-3xl mb-4 pt-20 font-black
-	  	md:mb-10"
-		>
+		<div class="text-3xl mb-4 pt-20 font-black 	md:mb-10">
 			Frontend articles
 		</div>
-		<div class="flex flex-col gap-2 items-center
-	  	md:flex-row"
-		>
+		<div class="flex flex-col gap-2 items-center md:flex-row">
 			<div class="text-lg font-black">
 				Sort by tags:
 			</div>
 			<div class="flex gap-2 flex-wrap">
-				<div class="py-0.5 px-2 text-sm rounded-lg border-2 border-blush hover:bg-blush cursor-pointer"> All</div>
-				<div class="py-0.5 px-2 text-sm rounded-lg border-2 border-blush hover:bg-blush cursor-pointer"> HTML</div>
-				<div class="py-0.5 px-2 text-sm rounded-lg border-2 border-blush hover:bg-blush cursor-pointer"> CSS</div>
-				<div class="py-0.5 px-2 text-sm rounded-lg border-2 border-blush hover:bg-blush cursor-pointer"> JavaScript
-				</div>
-				<div class="py-0.5 px-2 text-sm rounded-lg border-2 border-blush hover:bg-blush cursor-pointer"> Vue.js</div>
-				<div class="py-0.5 px-2 text-sm rounded-lg border-2 border-blush hover:bg-blush cursor-pointer"> Typescript
-				</div>
+				<div class="tag active" data-id="all"> All </div>
+				<div class="tag" data-id="html"> HTML </div>
+				<div class="tag" data-id="css"> CSS </div>
+				<div class="tag" data-id="javascript"> JavaScript </div>
+				<div class="tag" data-id="vue.js"> Vue.js </div>
+				<div class="tag" data-id="typescript"> Typescript </div>
 			</div>
 		</div>
-		<div id="topics" class="grid grid-cols-1 gap-2 p-4 bg-white items-center
-	  	md:grid-cols-3"
-		>
-			<div
-				class="h-36 p-4 flex flex-col justify-between gap-4  shadow-base cursor-pointer hover:shadow-xl duration-300">
-				<div class="text-lg font-bold leading-5"> CSS Grid Layout</div>
-				<div class="flex justify-between items-center">
-					<div class="py-0.5 px-2 text-xs rounded-xl border-2 text-blue border-blue"> CSS</div>
-					<div class="flex gap-2 items-center">
-						<span class="text-xs opacity-70 font-black"> MDN </span>
-						<img src="src/img/arrow.svg" alt="read" class="w-5 h-5">
-					</div>
-				</div>
-			</div>
-		</div>
+		<div id="articles" class="w-full h-full grid grid-cols-1 auto-rows-min gap-2 p-4 bg-white md:grid-cols-3"></div>
 	</div>
 </div>
+
+<script src="index.js"></script>
 </body>
 </html>
