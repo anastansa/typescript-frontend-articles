@@ -53,6 +53,12 @@ var articles = [
         tag: 'vue.js',
         url: 'https://lokalise.com/blog/vue-i18n'
     },
+    {
+        title: 'Some Links About CSS Gradients',
+        source: 'CSS-Tricks',
+        tag: 'css',
+        url: 'https://css-tricks.com/some-links-about-css-gradients/'
+    },
 ];
 var newArticle = {
     title: 'CSS Grid Layout',
@@ -82,7 +88,7 @@ var articlesContainer = document.getElementById('articles');
 window.addEventListener('DOMContentLoaded', function () { return displayArticles(articles); });
 var displayArticles = function (currentArticles) {
     var articlesBlock = currentArticles.map(function (item) {
-        return "<a href=\"".concat(item.url, "\" target=\u201D_blank\u201D class=\"block h-36\">\n              <div class=\"h-36 p-4 flex flex-col justify-between gap-4  shadow-base cursor-pointer hover:shadow-xl duration-300\">\n                <div class=\"text-lg font-bold leading-5\"> ").concat(item.title, " </div>\n                <div class=\"flex justify-between items-center\">\n                  <div class=\"py-0.5 px-2 text-xs rounded-xl border-2 text-blue border-blue\"> ").concat(item.tag, " </div>\n                  <div class=\"flex gap-2 items-center\">\n                    <span class=\"text-xs opacity-70 font-black\"> ").concat(item.source, " </span>\n                    <img src=\"src/img/arrow.svg\" alt=\"read\" class=\"w-5 h-5\">\n                  </div>\n                </div>\n              </div>\n            </a>");
+        return "<a href=\"".concat(item.url, "\" target=\u201D_blank\u201D class=\"block h-36\">\n              <div class=\"h-36 p-4 flex flex-col justify-between gap-4 bg-white shadow-base cursor-pointer hover:shadow-xl duration-300\">\n                <div class=\"text-lg font-bold leading-5\"> ").concat(item.title, " </div>\n                <div class=\"flex justify-between items-center\">\n                  <div class=\"py-0.5 px-2 text-xs rounded-xl border-2 text-blue border-blue\"> ").concat(item.tag, " </div>\n                  <div class=\"flex gap-2 items-center\">\n                    <span class=\"text-xs opacity-70 font-black\"> ").concat(item.source, " </span>\n                    <img src=\"src/img/arrow.svg\" alt=\"read\" class=\"w-5 h-5\">\n                  </div>\n                </div>\n              </div>\n            </a>");
     });
     articlesContainer.innerHTML = articlesBlock.join('');
 };

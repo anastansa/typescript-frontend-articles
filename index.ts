@@ -60,6 +60,12 @@ const articles:Article[] = [
     tag: 'vue.js',
     url: 'https://lokalise.com/blog/vue-i18n'
   },
+  {
+    title: 'Some Links About CSS Gradients',
+    source: 'CSS-Tricks',
+    tag: 'css',
+    url: 'https://css-tricks.com/some-links-about-css-gradients/'
+  },
 ]
 
 let newArticle:Article = {
@@ -95,7 +101,7 @@ window.addEventListener('DOMContentLoaded', () => displayArticles(articles))
 const displayArticles = function(currentArticles: Article[]):void {
   let articlesBlock = currentArticles.map(item => {
     return `<a href="${item.url}" target=”_blank” class="block h-36">
-              <div class="h-36 p-4 flex flex-col justify-between gap-4  shadow-base cursor-pointer hover:shadow-xl duration-300">
+              <div class="h-36 p-4 flex flex-col justify-between gap-4 bg-white shadow-base cursor-pointer hover:shadow-xl duration-300">
                 <div class="text-lg font-bold leading-5"> ${item.title} </div>
                 <div class="flex justify-between items-center">
                   <div class="py-0.5 px-2 text-xs rounded-xl border-2 text-blue border-blue"> ${item.tag} </div>
