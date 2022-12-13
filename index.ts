@@ -77,7 +77,7 @@ let newArticle:Article = {
 
 articles.push(newArticle)
 
-let tagItems = document.querySelectorAll('.tag');
+let tagItems = document.querySelectorAll<HTMLElement>('.tag');
 
 tagItems.forEach(item  => {
   item.addEventListener('click', e => {
@@ -85,7 +85,7 @@ tagItems.forEach(item  => {
     tagItems.forEach(item => { if(item !== e.currentTarget) item.classList.remove('active') })
 
     const { currentTarget } = e
-    let tag = (currentTarget as HTMLButtonElement).dataset.id
+    let tag = (currentTarget as HTMLDivElement).dataset.id
     let currentArticles = articles.filter(item => item.tag === tag)
     if(tag === 'all') {
       displayArticles(articles)
@@ -95,10 +95,10 @@ tagItems.forEach(item  => {
   })
 })
 
-const articlesContainer = document.getElementById('articles')
+const articlesContainer = document.getElementById('articles') as HTMLDivElement;
 window.addEventListener('DOMContentLoaded', () => displayArticles(articles))
 
-const displayArticles = function(currentArticles: Article[]):void {
+const displayArticles = (currentArticles: Article[]):void => {
   let articlesBlock = currentArticles.map(item => {
     return `<a href="${item.url}" target=”_blank” class="block h-36">
               <div class="h-36 p-4 flex flex-col justify-between gap-4 bg-white shadow-base cursor-pointer hover:shadow-xl duration-300">
@@ -113,7 +113,7 @@ const displayArticles = function(currentArticles: Article[]):void {
               </div>
             </a>`
   })
-  articlesContainer!.innerHTML = articlesBlock.join('')
+  articlesContainer.innerHTML = articlesBlock.join('')
 }
 
 
